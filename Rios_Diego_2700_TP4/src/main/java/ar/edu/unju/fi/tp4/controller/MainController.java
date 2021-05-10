@@ -72,13 +72,13 @@ public class MainController {
 	
 	@GetMapping("/producto/ultimo")
 	public ModelAndView getUltimoProductoPage() {
-		boolean pasa=true;
 		ModelAndView modelView = new ModelAndView("ultimo-producto");
-		if (pasa==true) {
-			Producto primero = new Producto(0, null, 0, null, 0);
-			productoService.addProducto(primero);
-			pasa=false;
-		}
+		
+		  if (productoService.listaProductos().isEmpty()) { 
+			  Producto primero = new Producto(0, null, 0, null, 0);
+			  productoService.addProducto(primero);
+		  }
+		 
 		modelView.addObject("producto", productoService.getUltimoProducto());
 		return modelView;
 	}

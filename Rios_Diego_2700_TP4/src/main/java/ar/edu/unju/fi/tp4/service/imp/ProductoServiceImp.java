@@ -48,5 +48,9 @@ public class ProductoServiceImp implements IProductoService {
 		LOGGER.info(producto);
 		this.productos.add(producto);
 	}
+	@Override
+	public List<Producto> listaProductos(){
+		return this.productos;
+	}
 	
 }
