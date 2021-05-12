@@ -15,8 +15,11 @@
 				<div class="card border-success mb-3">
 				  <h5 class="card-header">Nueva Compra</h5>
 				  <div class="card-body text-success">
-				    <h5 class="card-title">¡¡Exitos!!</h5>
-				    <p class="card-text">Se guardó correctamente su compra</p>
+				    <h5 class="card-title">¡¡Compra Registrada!!</h5>
+				    <p class="card-text fw-bold">Detalles de la Compra:</p>
+				    <p class="card-text" th:text="'ID:'+${compra.id}+' - CANTIDAD:'+${compra.cantidad}+' - TOTAL:'+${compra.total}"></p>			
+				    <p class="card-text fw-bold">Detalle del Producto:</p>
+				    <p class="card-text" th:text="'CODIGO:'+${compra.producto.codigo}+' - NOMBRE:'+${compra.producto.nombre}+' - PRECIO:'+${compra.producto.precio}+' - MARCA:'+${compra.producto.marca}+' - STOCK:'+${compra.producto.stock}"></p>
 				    <div class="text-end">
 				    	<a href="/compra/nuevo" class="btn btn-success">Aceptar</a>
 				    </div>

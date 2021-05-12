@@ -48,8 +48,10 @@ public class CompraController {
 		}
 		unaCompra.setProducto(aux);
 		compraService.addCompra(unaCompra);
-		model.addAttribute(compraService.getCompra());
-		this.getNuevaCompraPage(model);
+		/*
+		 * model.addAttribute(compraService.getCompra());
+		 * this.getNuevaCompraPage(model);
+		 */
 		return "resultado-compra";
 	}
 }
