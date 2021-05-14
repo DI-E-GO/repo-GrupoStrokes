@@ -29,7 +29,7 @@
 									<label for="inputDocumento" class="col-form-label">Producto</label>
 								</div>
 								<div class="col-8">
-									<select class="form-select" th:field="*{producto.codigo}">
+									<select class="form-select" id="producto" th:field="*{producto.codigo}">
 										<option th:each="prod : ${productos}" th:value="${prod.codigo}" th:text="${prod.nombre}"></option>
 									</select>
 								</div>
