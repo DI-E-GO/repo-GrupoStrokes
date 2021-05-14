@@ -54,4 +54,12 @@ public class CompraController {
 		 */
 		return "resultado-compra";
 	}
+	
+	@GetMapping("/compra/lista")
+	public ModelAndView getListaComprasPage() {
+		ModelAndView modelView = new ModelAndView("listacompras");
+		modelView.addObject("compras", compraService.getCompras());
+		
+		return modelView;
+	}
 }
